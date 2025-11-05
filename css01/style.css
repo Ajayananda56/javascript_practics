@@ -1,0 +1,39 @@
+body {
+  background: linear-gradient(135deg, #141E30, #243B55);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Simple Box */
+.box {
+  background: #fff;
+  color: #333;
+  padding: 50px 80px;
+  font-size: 1.5rem;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  animation: zoomIn 1s ease forwards;
+}
+
+/* Hover par thoda zoom */
+.box:hover {
+  transform: scale(1.1);
+}
+
+/* Keyframes Animation for entry */
+@keyframes zoomIn {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
