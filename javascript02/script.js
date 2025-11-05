@@ -77,3 +77,22 @@
 // for(let i = start; i <= end; i++){
 //   console.log(i)
 // }
+
+let balance = 1000; // starting balance
+const maxWithdrawals = 3;
+
+for (let i = 1; i <= maxWithdrawals; i++) {
+  let amount = parseInt(prompt(`Enter withdrawal amount (Attempt ${i} of 3):`));
+
+  if (amount > balance) {
+    console.log("❌ Insufficient Balance!");
+  } else if (amount <= 0) {
+    console.log("⚠️ Invalid amount! Please enter a positive value.");
+  } else {
+    balance -= amount; // subtract withdrawal from balance
+    console.log(`✅ Withdrawal successful: ₹${amount}`);
+    console.log(`💰 Remaining Balance: ₹${balance}`);
+  }
+}
+
+console.log(`🏦 Final Balance after 3 attempts: ₹${balance}`);
